@@ -47,7 +47,7 @@ public class FileService implements IService {
 		HttpResponse response = new HttpResponse();
 		this.setRequestContentType(filename, response);
 		response.openHttpAnswer(clientSocket);
-		this.handler.copyBinaryFile(filename, response);
+		this.handler.copyFile(filename, response);
 		response.closeHttpAnswer();
 	}
 
