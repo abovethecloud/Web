@@ -4,6 +4,7 @@ import httpUtils.HttpResponse;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -42,5 +43,15 @@ public class ImageFileHandler implements FileHandler {
 		BufferedImage image = ImageIO.read(file);
 		ImageIO.write(image, this.imageType, message.getOutputStream());
 
+	}
+
+	@Override
+	public void copyBinaryFile(String filename, HttpResponse response)
+			throws IOException, FileNotFoundException {
+
+		File file = new File(filename);
+		BufferedImage image = ImageIO.read(file);
+		ImageIO.write(image, this.imageType, response.getOutputStream());
+		
 	}
 }

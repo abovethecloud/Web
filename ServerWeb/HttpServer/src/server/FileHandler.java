@@ -2,7 +2,11 @@ package server;
 
 import httpUtils.HttpResponse;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * Le classi che implementano questa interfaccia devono garantire di essere in
@@ -22,5 +26,8 @@ public interface FileHandler {
 	 */
 	public void copyFile(String filename, HttpResponse response)
 			throws IOException;
+	
+	public void copyBinaryFile(String filename, HttpResponse response)
+			throws IOException, FileNotFoundException;
 
 }
