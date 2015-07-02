@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>Version Control - Svn</title>
+
+		<meta name="keywords" content="SVN, Sito Fondamenti di Informatica II">
+		<meta name="description" content="Semplice sito dimostrativo di conoscenze html e css per il corso di Fondamenti di Informatica II">
+		<meta charset="UTF-8">
+		<meta name="author" content="Claudio Peroni">
+
+		<link rel="stylesheet" type="text/css" href="CSS/css-Version_Control.css">
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<header>
+				<h1 id="titolone">Version Control</h1>
+				<nav>
+					<ul>
+						<li><a href="Home.html" class="sezione_menu">Un breve riassunto..</a></li>
+						<li><a href="Svn.html" class="sezione_menu" id="current">SVN</button></a></li>
+						<li><a href="Git.html" class="sezione_menu">Git</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="main_article">
+				<article>
+					<figure>
+						<img src="images/mad_computer.jpg" alt="..." />
+						<figcaption>Foto di uno dei bei momenti passati a lottare con il Version Control</figcaption>
+					</figure>
+					<hgroup style="padding-left:20px; padding-right:20px">
+						<h2>Subversion</h2>
+						<p>
+						Subversion (noto anche come SVN, che è il nome del suo client a riga di comando) è un sistema di controllo versione per software.<br/>
+						È stato progettato da CollabNet Inc. con lo scopo di essere il naturale successore di CVS, oramai considerato superato.
+						</p>
+						<br/><br/>
+
+						<h3>Alcune belle caratteristiche di SVN</h3>
+						<ul class="square">
+							<li>I commit sono atomici: le operazioni di modifica di una
+								serie di file sono indivisibili. Questa caratteristica non era
+								supportata da CSV e tale carenza cuasva, non di rado, incoerenze
+								all'interno di un progetto.</li>
+							<li>La storia di tutte la modifiche a file o cartelle viene
+								conservata, anche quando vengono interessati unicamente i metadati e
+								non il contenuto del file (non viene conservato il timestamp).</li>
+							<li>Supporto nativo alla condivisione di file binari: il
+								protocollo di salvataggio provvede a ridurre al minimo l'occupazione
+								di memoria sul server.</li>
+							<li>La comunicazione con il server Apache avviene attraverso
+								protocollo Http: è diffusa anche una versione di server custom,
+								chiamato svnserve, che implementa un protocollo proprietario sopra
+								TCP/IP.</li>
+							<li>La creazione di nuove brach è un'operazione semplice e
+								veloce, dal momento che SVN non differenzia tra cartelle e branch:
+								entrambe vengono trattate come repository all'interno di altri
+								repository.</li>
+							<li>La creazione di nuove branch è un'operazione semplice e
+								veloce, dal momento che SVN non differenzia tra cartelle e branch:
+								entrambe vengono trattate come repository all'interno di altri
+								repository.</li>
+							<li>Il software - e la maggior parte dei client - vengono
+								distribuiti sotto licenza open source ApacheLicense 1.7.</li>
+							<li>I merge con tra branch vengono registrati: questo permette
+								al sistema di operare unioni automatiche di branch, senza che un
+								intervento umano specifichi i singoli file da sottoporre a merge. In
+								caso di conflitti, è indispensabile l'intervento degli sviluppatori.</li>
+						</ul>
+					</hgroup>
+				</article>
+
+				<!--
+				<a href="TODO: Add link">
+					<article>
+						<figure>
+							<img src="immagine" alt="...2" />
+							<figcaption>Didascalia immagine 2</figcaption>
+						</figure>
+						<hgroup>
+							<h2>Titolo 2</h2>
+							<h3>Sottotitolo 2</h3>
+						</hgroup>
+						<p>Descrizione 2</p>
+					</article>
+				</a>
+				--> <!-- Questo è un articolo-link opzionale -->
+			</section>
+
+			<aside>
+				<section class="popular-recipes">
+					<h2>Collegamenti</h2>
+					<a href="https://subversion.apache.org">Subversion</a>
+					<a href="https://git-scm.com">Git</a>
+					<a href="https://code.google.com/hosting/">Google Code</a>
+					<a href="https://github.com">GitHub</a>
+				</section>
+				<section class="contact-details">
+					<h2>Crediti</h2>
+					<p style="padding-left:10px">Claudio Peroni<br />
+						Università degli studi di Pavia<br />
+						Fondamenti di Informatica II<br />
+						(prof. Alessandro Martinelli)</p>
+				</section>
+			</aside>
+			<footer>
+				&copy; 2015 Fondamenti II
+		</div><!-- .wrapper -->
+	</body>
+</html>

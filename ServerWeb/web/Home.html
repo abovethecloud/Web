@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 	<head>
-		<title>Relazione sl Version Control</title>
+		<title>Version Control - Home</title>
 
 		<meta name="keywords" content="SVN, Sito Fondamenti di Informatica II">
 		<meta name="description" content="Semplice sito dimostrativo di conoscenze html e css per il corso di Fondamenti di Informatica II">
@@ -18,9 +18,9 @@
 				<h1 id="titolone">Version Control</h1>
 				<nav>
 					<ul>
-						<li><a href="TODO: Link alla pagina" class="sezione_menu" id="current">Un breve riassunto..</a></li>
-						<li><a href="TODO: Link alla pagina" class="sezione_menu">SVN</button></a></li>
-						<li><a href="TODO: Link alla pagina" class="sezione_menu">Git</a></li>
+						<li><a href="Home.html" class="sezione_menu" id="current">Un breve riassunto..</a></li>
+						<li><a href="Svn.html" class="sezione_menu">SVN</button></a></li>
+						<li><a href="Git.html" class="sezione_menu">Git</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -31,11 +31,34 @@
 						<img src="images/mad_computer.jpg" alt="..." />
 						<figcaption>Foto di uno dei bei momenti passati a lottare con il Version Control</figcaption>
 					</figure>
-					<hgroup>
+					<hgroup style="padding-left:20px; padding-right:20px">
 						<h2>Dr. Google Code...</h2>
 						<h3>...Ovvero come imparai ad amare (e odiare) il Version Control</h3>
+						<p>
+						Al momento della divisione dei ruoli secondari, nessuno si aspettava che il proprio potesse risultare <b><a href="#hell">particolarmente pesante</a></b>. La scelta è stata dettata in parte da preferenze personali e in parte dal caso.<br/><br/>
+
+						Il ruolo di responsabile SVN si è presto tramutato nel ruolo di responsabile delle ingiurie giornaliere. La piattaforma con la quale stavamo acquisendo familiarità a lezione (Google Code) - usata nel corso dell'attività didattica dei precedenti anni senza troppi problemi - ha riservato a tutti noi una bella notizia: il progetto avrebbe chiuso di lì a poco.<br/>
+						Nell'euforia generale, la scelta è stata quella di orientarsi verso GitHub, una piattaforma che - per ammissione degli stessi genitori di Google Code - aveva avuto successo dove la nostra precedente risorsa aveva fallito.
+						</p>
+
+						<h2>GitHub.. supporta SVN?!</h2>
+						<p>Si. A dispetto del nome, GitHub (che è comunque nato con in mente un diverso approccio al Version Control) si è evoluto anche in questa direzione. Supporta SVN.<br/>
+						O, almeno, supporta dichiaratamente molte delle funzioni di SVN. Abbastanza bene. Insomma, non poi così male. Quando funzionano. Se funzionano..<br/>
+
+						<h2 id="hell">L'inferno della programmazione</h2>
+						<p>
+						Il programmatore è forte. E' un animale capace di sopravvivere senza cibo, acqua, in condizioni di estrema privazione del sonno e di supplire alla mancanza di luce naturale con la rassicurante oscurità della stanza in cui programmerà fino ad aver risolto quel bug che proprio non si spiega.<br/>
+						Ma quando cede il programmatore? Cede quando anche gli strumenti stessi che dovrebbero aiutarlo a tenere il codice ordinato, corretto, reperibile ovunque, condiviso e sincronizzato presentano problemi perfino più gravi del codice stesso. Ed è stato questo il caso del Version Control per questo progetto: SVN su GitHub è stato molto chiaro nel farsi capire a riguardo. Abbiamo riscontrato problemi più o meno in ogni ambito, tra cui:
+						</p>
+						<ul>
+							<li>Impossibilità di creare un nuovo progetto direttamente via SVN, è necessario ricorrere a git.</li>
+							<li>Rinominare? Non diciamo fesserie. No, dico sul serio, non si può rinominare un file o pacchetto senza incorrere nelle ire di SVN.</li>
+							<li>Errori varî e disparati dipendenti solo parzialmente da Hardware, S.O., versione di Subversion, versione dei plugin per Eclipse e Android Studio..</li>
+						</ul>
+						<p>
+						Alla fine la decisione del sottoscritto è stata quella di gestire tutto utilizzando Git. Se non altro è stata una buona occasione per imparare a conoscere anche questo strumento. Ogni qual volta si presentava un problema al resto del gruppo (fermo ad SVN) la risoluzione del problema affrontava due fasi: correzione del problema (fosse un commit fallito, avvenuto per metà, un checkout negato, uno di quegli squisiti merge automatici completamente casuali che non danno garanzia di consistenza del codice) utilizzando Git, per poi procedere a far si che il problema non si ripresentasse. È capitato più di una volta che per ottenere questo sia stato necessario disinstalla e reinstallare varie componenti (Eclipse, il plugin, Subversion).
+						</p>
 					</hgroup>
-					<p>Descrizione 1</p>
 				</article>
 
 				<!--

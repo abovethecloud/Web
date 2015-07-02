@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>Relazione sl Version Control</title>
+
+		<meta name="keywords" content="SVN, Sito Fondamenti di Informatica II">
+		<meta name="description" content="Semplice sito dimostrativo di conoscenze html e css per il corso di Fondamenti di Informatica II">
+		<meta charset="UTF-8">
+		<meta name="author" content="Claudio Peroni">
+
+		<link rel="stylesheet" type="text/css" href="CSS/css-Version_Control.css">
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<header>
+				<h1 id="titolone">Version Control</h1>
+				<nav>
+					<ul>
+						<li><a href="Home.html" class="sezione_menu">Un breve riassunto..</a></li>
+						<li><a href="Svn.html" class="sezione_menu">SVN</button></a></li>
+						<li><a href="Git.html" class="sezione_menu" id="current">Git</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="main_article">
+				<article>
+					<figure>
+						<img src="images/mad_computer.jpg" alt="..." />
+						<figcaption>Foto di uno dei bei momenti passati a lottare con il Version Control</figcaption>
+					</figure>
+					<hgroup style="padding-left:20px; padding-right:20px">
+						<h2>Anche Git ha giocato</h2>
+						<p>
+						Git è un sistema software di controllo di versione distribuito, creato da Linus Torvalds nel 2005.
+						È ben presto diventato un sistema di controllo di versione, direttamente utilizzabile da riga di comando; vari progetti software usano Git per tale attività, tra cui il kernel Linux.
+						</p>
+						<br/>
+						<h2>Caratteristiche</h2>
+						<ul>
+							<li>Grande facilità di branch</li>
+							<li>Git dà a ogni sviluppatore una copia locale dell'intera cronologia di sviluppo. Le modifiche vengono copiate da un repository a un altro.</li>
+							<li>È semplice utilizzare HTTP e FTP per pubblicare i repository.</li>
+							<li>Esiste la possiblità di emulare gli strumenti CVS.</li>
+							<li>Gestione efficiente di grandi progetti. Git è molto veloce e scalabile</li>
+						</ul>
+						<h2>Considerazioni</h2>
+						<p>
+						Grazie alla possibilità di effettuare commit in locale (nella sandbox della repository presente direttamente sul sistema in utilizzo), Git promette grande velocità nel tenere traccia del proprio lavoro.<br/>
+						Ciò che un sistema del genere non incoraggia è il frequente utilizzo della funzione "push", che è quella che effettivamente porta le modifiche effettuate al codice nella repository "sulla nuvola", visibli a tutti gli altri sviluppatori del team. La condivisione del codice ne risulta inevitabilmente compromessa, difatti un programmatore è incentivato a mantenere il lavoro in locale il più a lungo possibile, con conseguenti rischi di pericolosi merge e (forse peggio) rischi di "botte di codice improvvise", che rendono difficile seguire passo-passo lo sviluppo del codice altrui.
+						</p>
+					</hgroup>
+				</article>
+
+				<!--
+				<a href="TODO: Add link">
+					<article>
+						<figure>
+							<img src="immagine" alt="...2" />
+							<figcaption>Didascalia immagine 2</figcaption>
+						</figure>
+						<hgroup>
+							<h2>Titolo 2</h2>
+							<h3>Sottotitolo 2</h3>
+						</hgroup>
+						<p>Descrizione 2</p>
+					</article>
+				</a>
+				--> <!-- Questo è un articolo-link opzionale -->
+			</section>
+
+			<aside>
+				<section class="popular-recipes">
+					<h2>Collegamenti</h2>
+					<a href="https://subversion.apache.org">Subversion</a>
+					<a href="https://git-scm.com">Git</a>
+					<a href="https://code.google.com/hosting/">Google Code</a>
+					<a href="https://github.com">GitHub</a>
+				</section>
+				<section class="contact-details">
+					<h2>Crediti</h2>
+					<p style="padding-left:10px">Claudio Peroni<br />
+						Università degli studi di Pavia<br />
+						Fondamenti di Informatica II<br />
+						(prof. Alessandro Martinelli)</p>
+				</section>
+			</aside>
+			<footer>
+				&copy; 2015 Fondamenti II
+		</div><!-- .wrapper -->
+	</body>
+</html>
