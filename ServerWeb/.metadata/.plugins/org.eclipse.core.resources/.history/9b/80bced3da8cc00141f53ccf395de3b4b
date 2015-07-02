@@ -1,0 +1,23 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+	
+	public static final int PORT = 4444;
+	
+	public static void main(String[] args) {
+		
+		try {
+			ServerSocket socket = new ServerSocket(PORT);
+			
+			
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

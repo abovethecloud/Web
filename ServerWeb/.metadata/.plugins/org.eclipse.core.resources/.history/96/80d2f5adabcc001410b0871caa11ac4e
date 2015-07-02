@@ -1,0 +1,54 @@
+package server;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.LinkedList;
+
+public class Server {
+	
+	public static final int PORT = 4444;
+	
+	public static void main(String[] args) {
+		
+		try {
+			// aperta una porta tcp che voglio usare come server
+			ServerSocket socket = new ServerSocket(PORT);	
+			
+			// ora clientSocket resta in attesa di un client che si connette, solo uno
+			// il programma continua l'esecuzione solamente quando un client si conentte
+			Socket clientSocket = socket.accept();
+			
+			// recupera l'input stream di byte che sono arrivati dal client (messaggio)
+			// inputStreamReader converte l'input in byte in stream in caratteri
+			// BufferedReader spezza le stringhe con gli acapi 
+			BufferedReader in = new BufferedReader( new InputStreamReader( clientSocket.getInputStream() ));
+			
+			String line = in.readLine();
+			
+			LinkedList<String> lines = new LinkedList<String>();
+			while(line!=null){
+				System.out.println(line);
+				lines.add(line);
+				line = in.readLine();
+				if(line.length()==0){
+					line = null;
+				}
+			}
+			
+			OutputStreamWriter out = new OutputStreamWriter( clientSocket.getOutputStream() );
+			out.append('d');
+			
+			in.close();
+			socket.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

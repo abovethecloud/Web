@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--img src="data/new.gif" alt="NEW"-->
+<!--img src="data/updated.gif" alt="UPDATED"-->
+<html lang="it">
+<head>
+<title>SVN secondo Lele</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="description"
+	content="Relazione sul ruolo di responsabile SVN nel progetto di Fondamenti di Informatica 2.">
+
+<!-- custom style -->
+<link rel="stylesheet" href="css/relStyle.css">
+
+<!-- font-awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<h1>Relazione di approfondimento</h1>
+	<h2>Ruolo: responsabile SVN</h2>
+	<h3>Emanuele Fabbiani</h3>
+
+	<div class="box">
+		<p>
+			<i class="fa fa-warning fa-fw"></i><span class="key-word">ATTENZIONE</span><i
+				class="fa fa-warning fa-fw"></i>: questa pagina contiene invettive e
+			ed improperi contro il sistema SVN ed in particolare contro la sua
+			implementazione da parte di GitHub.<br> L'autore riconosce che
+			questi potrebbero essere causati da sua incompetenza e/o imperizia e
+			non da reali mancanze delle infrastrutture informatiche. Chiunque
+			potesse sentirsi turbato da eventuali parole malevole è pregato di
+			non proseguire la lettura.
+		</p>
+		<p>Per fermarsi ora:</p>
+		<ul>
+			<li><a href="index.html#myRole">Il mio ruolo</a></li>
+			<li><a href="index.html">Home</a></li>
+		</ul>
+		<p>Per chi volesse proseguire:</p>
+		<ol>
+			<li><a href="#Storia">Storia</a></li>
+			<li><a href="#Caratteristiche">Caratteristiche</a></li>
+			<li><a href="#FileSystem">File system di un repository</a></li>
+			<li><a href="#Esperienza">La nostra esperienza</a></li>
+		</ol>
+
+	</div>
+
+	<div id="Storia">
+		<h2>Storia</h2>
+		<img src="images/svn-name-banner.jpg" alt="SVN banner" class="imbig">
+		<p>SVN nasce da un progetto di CollabNet. Agli inizi del nuovo
+			millennio, l'azienda statunitense diede il via allo sviluppo di un
+			software di versioning capace di soppiantare CSV superandone le
+			limitazioni, prima tra tutte la non atomicità dei commit. Un anno più
+			tardi è già ad uno stadio di sviluppo tale da permettere di gestire
+			attraverso di esso il codice del progetto stesso. La prima verione
+			ufficiale viene rilasciata nel 2004. Il successo è tale che il nuovo
+			sistema soppianta in breve tempo il più blasonato predecessore e si
+			impone come leader dapprima nel mondo del software libero, poi anche
+			negli ecosistemi aziendali. Nel 2009 il progetto SVN entra nella
+			galassia Apache, dove occupa tuttora un posto di rilevo.</p>
+	</div>
+
+	<div id="Caratteristiche">
+		<h2>Caratteristiche</h2>
+		SVN è, insieme a Git, uno dei più completi strumenti per la
+		condivisione del codice. Le sue principali caratteristiche sono:
+		<table>
+			<colgroup>
+				<col class="col1">
+				<col class="col2">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td class="tdc">Nome del progetto</td>
+					<td>Subversion</td>
+				</tr>
+				<tr class="alt">
+					<td class="tdc">Creatore</td>
+					<td>CollabNet</td>
+				</tr>
+				<tr>
+					<td class="tdc">Attuale proprietario</td>
+					<td>Apache foundation</td>
+				</tr>
+				<tr class="alt">
+					<td class="tdc">Prima release</td>
+					<td>20 ottobre 2000</td>
+				</tr>
+				<tr>
+					<td class="tdc">Ultima release stabile</td>
+					<td>1.8.13 (Marzo 2015)</td>
+				</tr>
+				<tr class="alt">
+					<td class="tdc">Linguaggio</td>
+					<td>C</td>
+				</tr>
+				<tr>
+					<td class="tdc">Licenza</td>
+					<td>Apache License 1.7</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="square">
+			<li>I commit sono atomici: le operazioni di modifica di una
+				serie di file sono indivisibili. Questa caratteristica non era
+				supportata da CSV e tale carenza cuasva, non di rado, incoerenze
+				all'interno di un progetto.</li>
+			<li>La storia di tutte la modifiche a file o cartelle viene
+				conservata, anche quando vengono interessati unicamente i metadati e
+				non il contenuto del file (non viene conservato il timestamp).</li>
+			<li>Supporto nativo alla condivisione di file binari: il
+				protocollo di salvataggio provvede a ridurre al minimo l'occupazione
+				di memoria sul server.</li>
+			<li>La comunicazione con il server Apache avviene attraverso
+				protocollo Http: è diffusa anche una versione di server custom,
+				chiamato svnserve, che implementa un protocollo proprietario sopra
+				TCP/IP.</li>
+			<li>La creazione di nuove brach è un'operazione semplice e
+				veloce, dal momento che SVN non differenzia tra cartelle e branch:
+				entrambe vengono trattate come repository all'interno di altri
+				repository.</li>
+			<li>La creazione di nuove branch è un'operazione semplice e
+				veloce, dal momento che SVN non differenzia tra cartelle e branch:
+				entrambe vengono trattate come repository all'interno di altri
+				repository.</li>
+			<li>Il software - e la maggior parte dei client - vengono
+				distribuiti sotto licenza open source ApacheLicense 1.7.</li>
+			<li>I merge con tra branch vengono registrati: questo permette
+				al sistema di operare unioni automatiche di branch, senza che un
+				intervento umano specifichi i singoli file da sottoporre a merge. In
+				caso di conflitti, è indispensabile l'intervento degli sviluppatori.</li>
+		</ul>
+	</div>
+
+	<div id="FileSystem">
+		<h2>Il file system di SVN</h2>
+		<img src="images/svn-tree.png" alt="SVN tree" class="imbig">
+		<p>Il file system di un repository SVN può essere pensato come uno
+			spazio a due dimensioni: sono necessarie due coordinate per
+			identificare univocamente una risorsa.</p>
+		<ul>
+			<li>Il path (come nei file system dei comuni sistemi operativi)</li>
+			<li>La versione</li>
+		</ul>
+		<p>
+			Ogni versione, infatti, è un file system separato: ha una propria
+			root directory ed una serie di sotto-cartelle. Ogni file è
+			memorizzato come un link alla versione più recente: sono inoltre
+			conservate tutte le differenze tra una revisione e l'altra. Lo spazio
+			occupato da un repository SVN risulta quindi essere proporzionale
+			alll'entità delle modifiche via via apportate e non al loro numero.<br>
+			Il file system di un repository SVN utilizza il metodo delle
+			transazioni per garantire l'indivisibilità dei commit. Ogni
+			transazione si riferisce ad una root directory, non necessariamente
+			la più recente, e solo su quella opera. Una transazione può avere
+			successo, oppure essere rifiutata. Nel primo caso, i file modificati
+			entrano a far parte del repository, nel secondo tutte le azioni
+			vengono annullate e l'intero file system viene riportato alla
+			condizione precedente l'avvio della transazione. In tal modo si
+			evitano peroblemi di incoerenza dovuti alla coesistenza di più
+			versioni in una stessa root.
+		</p>
+	</div>
+	<div id="Esperienza">
+		<h2>xTrEAM ed SVN</h2>
+		<p>
+			Doveva essere un ruolo tranquillo: qualche approfondimento su
+			Wikipedia, qualche dritta data ai compagni di squadra, qualche
+			arrabbiatuara passeggera e nulla più. La spina dorsale di SVN - il
+			sistema client-server - è ormai raffinato e efficiente. I problemi
+			noti sono pochi e facilemente superabili. Dover cancellare e ricreare
+			un pacchetto invece di utilizzare la funzione rename non è poi una
+			così grande fatica.<br>Invece i responsabili SVN di tutti i
+			gruppi sono stati coinvolti in una lotta. Contro il sistema. E contro
+			che lo sfrutta.<br> La chiusura di Google Code - il provider SVN
+			di riferimento - ha costretto tutti i gruppi del nostro corso a
+			cercare soluzioni alternative. Su indicazione della stessa azienda di
+			Mountain View, la maggior parte di noi si è orientata su GitHub. <br>
+			Pessima scelta. <br> Fondato da alcuni dei principali
+			sviluppatori di linux, GitHub si propone come una delle principali
+			piattaforme di condivisione del codice. Nonostante offra supporta sia
+			a repository SVN che a Git, il nome suggerisce una certa parzialità.
+			Sarà un caso, ma abbiamo avuto modo di constatare che il servizio git
+			opera molto più fluidamente di quello SVN. Per usare un eufemismo. I
+			problemi che abbiamo riscontrato e affrontato includono, ma non si
+			limitano, a:
+		</p>
+		<ul>
+			<li>Impossibilità di creare un nuovo progetto: è stato
+				necessario effettuare il primo commit con git.</li>
+			<li>Impossibilità di rinominare un pacchetto: occorre
+				concellarlo e ricrearlo.</li>
+			<li>Enorme incidenza di commit falliti: a volte è stato
+				necessario inviare al repository un file alla volte, provocando
+				un'ovvia distorsione della successione temporale delle verisoni.</li>
+		</ul>
+		<p>Si potrebbe proseguire, ma non sarebbe di alcun beneficio. Per
+			terminare, è forse più opportuno ricordare il grande valore
+			istruttivo dell'esperienza di lavorare, di collaborare a distanza.
+			Questo porta alla necessità, mai incontrata prima, di studiare e di
+			capire, i progressi compiuti dai propri compagni. Grazie alla
+			possibilità di confronto tra veriosni differenti dello stesso file,
+			SVN è un alleato fondamentale in questa sfida.</p>
+		<p>E' tempo di porre termine a questa parentesi personale: non
+			rimane che chiedere umilmente perdono al lettore per la forma e per i
+			contenuti di questa sezione. Parafrasando un personaggio ben più
+			sfortunato di chi scrive, "la carta è più paziente degli uomini". I
+			monitor ancor di più.</p>
+	</div>
+	<hr>
+	<footer>
+		<p>Copyright © 2015 Whiskey Inc | Designed by Lele.</p>
+		<script src="js/last_update.js"></script>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img
+				style="border: 0; width: 88px; height: 31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+				alt="CSS Valido!">
+			</a>
+		</p>
+
+	</footer>
+
+</body>
+</html>
