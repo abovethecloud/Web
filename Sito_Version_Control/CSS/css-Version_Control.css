@@ -1,0 +1,188 @@
+
+@import url(Fonts/SanFranciscoFont/darkonlight.css);
+/*
+ * Specifico proprietà di stile per più tipologie di elemento separandoli da virgole prima di aprire la graffa.
+ */
+ header, section, footer, aside, nav, article, figure, figcaption {
+	display: block;
+}
+
+body {
+	color: #666666;
+	background-color: #ECECEA;
+	font-family: 'San Francisco Display', sans-serif;
+	line-height: 1.4em;
+	margin: 0px;
+}
+
+/* 
+ * Con ".classeProva" indico le proprietà di qualunque elemnto - di qualunque tipo - associato alla classe "classeProva".
+ * Se volessi riferirmi agli elementi di una classe di un particolare tipo (ad esempio paragrafi "p", dovrei specificare "p.classeProva"
+ */
+.wrapper {
+	width: 940px;
+	margin: 20px auto 20px auto;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+	background-image:url(../images/backgroung_ondulato.jpg); background-repeat:repeat;
+}
+
+header {
+	height: 100px;
+	background-color: #74AFAD;
+}
+
+/*
+ * Per indicare un elemento particolare con un certo identificativo non si usa il punto (per le classi), ma il cancelletto.
+ */
+h1#titolone {
+	/*text-indent: -9999px;*/
+	color: #ffffff;
+	width: 940px;
+	height: 40px;
+	margin: 0px;
+	padding: 30px 20px 0px 100px;
+}
+
+nav, footer {
+	clear: both;
+	color: #ffffff;
+	background-color: #558C89;
+	height: 30px;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 5px 0px 5px 30px;
+}
+
+nav li {
+	display: inline;
+	margin-right: 10px;
+}
+
+nav li a {
+	color: #ffffff;
+}
+
+/*
+ * Gli elementi "nav li a.sezione" sono quelli di tipo "a" (collegamenti) della classe sezione contenuti in una lista ("li"),
+ * contenuta a sua volta in una barra di navigazione, ovvero i collegamenti nel menu.
+ * L'elemento con id "current" è quello che rappresenta la pagina html attualmente selezionata.
+ * L'elemento selezionato dal cursore è indicato con ":hover"
+ */
+ nav li a.sezione_menu {
+	background-color:#558c89;
+	border-radius:15px;
+	display:inline-block;
+	cursor:pointer;
+	color: #ffffff;
+	font-family: 'San Francisco Display', sans-serif;
+	font-size:17px;
+	padding:0px 20px;
+}
+nav li a.sezione_menu#current {
+	color: #000000;
+}
+nav li a.sezione_menu:hover {
+	background-color: #D9853B;
+}
+
+
+/*
+ * Si riferisce agli elementi di tipo "section" appartenenti alla classe specificata dopo il punto
+ */
+section.main_article {
+	float: left;
+	width: 659px;
+	border-right: 1px solid #eeeeee;
+}
+
+article {
+	clear: both;
+	overflow: auto;
+	width: 100%;
+}
+
+/*
+ * Margine verticale superiore del paragrafo principale
+ */
+hgroup {
+	margin-top: 40px;
+}
+
+figure {
+	float: left;
+	width: 290px;
+	height: 220px;
+	padding: 5px;
+	margin: 20px;
+	border: 1px solid #eeeeee;
+}
+
+/*
+ * Didascalie alle figure
+ */
+figcaption {
+	font-size: 90%;
+	text-align: left;
+}
+
+/*
+ * Paragrafi laterali
+ */
+aside {
+	width: 230px;
+	float: left;
+	padding: 0px 0px 0px 20px;
+}
+
+/*
+ * Voci cliccabili menu laterale
+ */
+aside section a {
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * hover indica il cambiamento al passaggio del mouse
+ */
+aside section a:hover {
+	color: #ffffff;
+	background-color: #D9853B;
+}
+
+a {
+	color: #558C89;
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h2 {
+	margin: 10px 0px 5px 0px;
+	padding: 0px;
+}
+
+h3 {
+	margin: 0px 0px 10px 0px;
+	color: #de6581;
+}
+
+aside h2 {
+	padding: 30px 0px 10px 0px;
+	color: #74AFAD;
+}
+
+section.contact-details {
+	color: #558C89;
+}
+
+footer {
+	font-size: 80%;
+	padding: 7px 0px 0px 20px;
+}
