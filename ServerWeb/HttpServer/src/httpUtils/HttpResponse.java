@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.nio.charset.Charset;
+import java.util.Date;
 
 import server.ContentType;
 
@@ -34,7 +35,7 @@ public class HttpResponse {
 				Charset.forName("UTF-8").newEncoder());
 
 		out.write("HTTP/1.1 200 OK\n");
-		out.write("Date: Sun, 31 May 2015 14:47:00\n");
+		out.write("Date: " + (new Date()).toString() + "\n");
 		out.write("Content-Type: " + contentType.getContentType()
 				+ " charset=utf-8\n");
 		out.write("\n");

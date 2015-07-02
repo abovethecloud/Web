@@ -40,7 +40,7 @@ public class Server {
 							if (service == null) {
 								service = new FileService(
 										new TextFileHandler(),
-										"web/index.html", "web/error404.html");
+										"web/Home.html", "web/error404.html");
 							}
 							service.sendHTTP(clientSocket, request);
 							clientSocket.close();
