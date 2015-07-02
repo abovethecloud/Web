@@ -10,9 +10,6 @@ import java.net.Socket;
 /**
  * Questa implementazione di {@link IService} permette di caricare nella risposta
  * http un generico file.
- * 
- * @author lele
- *
  */
 public class FileService implements IService {
 

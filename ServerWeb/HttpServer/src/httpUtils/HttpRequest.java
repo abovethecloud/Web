@@ -10,9 +10,6 @@ import java.util.StringTokenizer;
 /**
  * Questa classe rappresenta una generica richiesta secondo il protocollo HTTP.
  * Permette di conoscere l'URI richiesto.
- * 
- * @author lele
- *
  */
 public class HttpRequest {
 

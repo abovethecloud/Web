@@ -9,8 +9,6 @@ import java.net.Socket;
  * Generico servizio offerto dal server. Con "servizio" si intende una qualsiasi
  * sequenza di elaborazione capace di produrre una risposta HTTP da inviare al
  * client.
- * 
- * @author lele
  */
 public interface IService {
 

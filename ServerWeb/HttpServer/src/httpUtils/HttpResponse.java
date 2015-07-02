@@ -14,8 +14,6 @@ import server.ContentType;
  * I parametri iniziali della risposta sono fittizi e non significativi.
  * Le chiamate a {@codeopenHttpAnswer(Socket clientSocket)} devono sempre essere seguite 
  * da chiamate a {@code closeHttpAnswer()}.
- * 
- * @author lele
  */
 public class HttpResponse {
 

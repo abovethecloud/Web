@@ -13,9 +13,6 @@ import server.FileHandler;
 /**
  * Copia nella risposta un'immagine. Il tipo di immagine deve essere specificato
  * nel costruttore.
- * 
- * @author lele
- *
  */
 public class ImageFileHandler implements FileHandler {
 

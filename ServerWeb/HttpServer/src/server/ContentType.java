@@ -2,9 +2,6 @@ package server;
 
 /**
  * Content type (tipi di file) supportati dal server.
- * 
- * @author lele
- *
  */
 public enum ContentType {
 

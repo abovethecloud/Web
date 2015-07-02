@@ -11,9 +11,6 @@ import server.FileHandler;
 
 /**
  * Copia nella risposta un file testuale.
- * 
- * @author lele
- *
  */
 public class TextFileHandler implements FileHandler {
 

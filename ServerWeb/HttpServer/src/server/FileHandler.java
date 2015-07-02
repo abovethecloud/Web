@@ -8,9 +8,6 @@ import java.io.IOException;
  * Le classi che implementano questa interfaccia devono garantire di essere in
  * grado di inserire un file, identificato dal path, nel corpo di una richiesta
  * HTTP {@code HttpResponse}.
- * 
- * @author lele
- *
  */
 public interface FileHandler {
 
