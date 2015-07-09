@@ -20,7 +20,7 @@ body {
  * Se volessi riferirmi agli elementi di una classe di un particolare tipo (ad esempio paragrafi "p", dovrei specificare "p.classeProva"
  */
 .wrapper {
-	margin: 20px auto 20px auto;
+	margin: 0px auto;
 	background-color: #ffffff;
 	background-image:url(../images/backgroung_ondulato.jpg); background-repeat:repeat;
 }
@@ -38,7 +38,8 @@ h1#titolone {
 	color: #ffffff;
 	height: 40px;
 	margin: 0px;
-	padding: 30px 20px 0px 300px;
+	padding-top: 30px;
+	text-align: center;
 }
 
 nav, footer {
@@ -50,12 +51,16 @@ nav, footer {
 
 nav ul {
 	margin: 0px;
-	padding: 5px 0px 5px 232px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left:-50px;
+	text-align: center;
 }
 
 nav li {
 	display: inline;
-	margin-right: 10px;
+	text-align: center;
+
 }
 
 nav li a {
